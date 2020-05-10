@@ -1,14 +1,14 @@
-//import productsdb,{ bulkcreate,getData,createEle,Sortobj } from './module.js';
-
+//import productsdb from './module.js';
+//import { bulkcreate,getData,createEle,Sortobj } from './module.js';
 
 const productsdb = (dbname, table) => {
    const db = new Dexie(dbname);
    db.version(1).stores(table);
    db.open();
-
+ 
    return db;
  };
-
+ 
  const bulkcreate = (dbtable, data) => {
    let flag = empty(data);
    if (flag) {
@@ -45,7 +45,7 @@ const getData = (dbtable,fn) =>{
            obj =Sortobj(table);
 
            fn(obj,index++);
-
+           
          })
       }
       else{
@@ -62,7 +62,7 @@ const Sortobj = sortobj =>{
       editorial: sortobj.editorial,
       encargado: sortobj.encargado,
       matricula: sortobj.matricula
-
+       
    }
 
    return obj;
@@ -122,7 +122,7 @@ function table(){
                createEle("td",tr, td=>{
                   td.textContent = data.matricula === data[value]? `${data[value]}`: data[value];
                })
-
+               
             }
             createEle("td",tr,td=>{
                createEle("i",td,i=>{
@@ -140,7 +140,7 @@ function table(){
                   i.onclick= deletebtn;
                })
             })
-
+            
          })
       }
       else{
@@ -201,3 +201,5 @@ function textID(textboxid){
       textboxid.value=data.id || 1;
    })
 }
+
+////////////////////////////////////
