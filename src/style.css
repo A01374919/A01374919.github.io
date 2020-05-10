@@ -1,0 +1,47 @@
+a:link {
+    color:inherit;
+ }
+.d-flex input{ 
+    margin: .7em 0em ;
+}
+
+.d-flex button{
+    margin: 1.5em .6em;
+    padding: .3em 2.4em;
+    
+}
+
+.Title{
+    color: white;
+}
+
+.Subtitle{
+    position: relative;
+    left: 80px;
+    white-space: pre-line;
+}
+
+#TS-Title{
+    text-align: center;
+}
+
+
+.btn{
+    color: darkblue;
+    background-color: white;
+}
+
+.DB-title{
+    position: 50%;
+}
+
+body{
+    background-color: rgb(4, 158, 158);
+}
+
+.table-striped{
+    color: white;
+}
+
+
+

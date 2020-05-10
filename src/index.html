@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiblioTECa</title>
+
+    
+    <script src="https://kit.fontawesome.com/2356de706f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+<body>
+  <div class="d-flex justify-content-center Title">
+    <div class="p-2 bd-highlight">
+      <a href="https://biblioteca.tec.mx/inicio" target="_blank">
+        <img src="https://s3.amazonaws.com/libapps/accounts/76166/images/img2_logobiblioxplore_2__1_.png" alt="Logo Biblioxplora">
+      </a>
+    </div>
+    <div class="p-2 bd-highlight align-self-center">
+      <h1 id="TS-Title">  <i class="fas fa-book"></i>  BiblioTECa </h1>
+    </div>
+  </div>
+
+  <div class="Title Subtitle">
+    <h3 id="Venta-Title"> <i class="fas fa-book-reader"></i> Registrar nuevo préstamo</h3>
+  </div>
+
+    <div class="d-flex justify-content-around">
+        <form class="w-75">
+          <div class="row">
+            <div class="p-2 flex-fill bd-highlight"><input type="text" id="Rentaid" class="form-control m-0" readonly placeholder="Préstamo Número" autocomplete="off"></div>
+            <div class="p-2 flex-fill bd-highlight"><input type="text" id="Encargado" class="form-control m-0" placeholder="Encargado de biblioteca" autocomplete="off"> </div>
+          </div>
+          <div class="row">
+            <div class="flex-fill bd-highlight"><input type="text" id="bookName" class="form-control" placeholder="Nombre del libro" autocomplete="off"></div>
+          </div>
+          <div class="row">
+            <div class="p-2 flex-fill bd-highlight">
+              <input type="text" id="editorial" class="form-control m-0" placeholder="Editorial" autocomplete="off">
+            </div>
+            <div class="p-2 flex-fill bd-highlight">
+              <input type="text" id="matricula" class="form-control m-0" placeholder="Matrícula del solicitante" autocomplete="off">
+            </div>   
+          </div>
+        </form>
+    </div>
+    <!-- aqui lo que voy a hacer es crear,actualizar, leer y borrar botones-->
+    <div class="d-flex justify-content-center">
+        <button class="btn btn-success" id="btn-register">Registrar</button>
+        <button class="btn btn-warning" id="btn-update">Corregir registro de renta</button>
+    </div>
+
+    <div class="Title Subtitle">
+      <h3 id="DB-Title"><i class="fas fa-database"></i>  Registro de las rentas</h3>
+      <div class="d-flex justify-content">
+        <button class="btn btn-danger" id="btn-delete">Borrar Rentas</button>
+        <button class="btn btn-primary" id="btn-show">Mostrar rentas</button>
+      </div>
+    </div>
+
+    <div class="container d-flex">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th class="THeader" scope="col">Renta ID</th>
+                <th class="THeader" scope="col">Nombre del libro</th>
+                <th class="THeader" scope="col">Editorial</th>
+                <th class="THeader" scope="col">Encargado</th>
+                <th class="THeader" scope="col">Matricula</th>
+                <th class="THeader" scope="col">Editar</th>
+                <th class="THeader" scope="col">Borrar</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+          </table>
+   
+    </div>
+   
+    <div class="container text-center">
+      <div id="notfound"> </div>
+    </div>
+
+  <!-- Include Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <!-- Include Dexie -->
+  <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+
+  <!-- Custom main file-->
+  <script src="../js/main.js" type="module"></script>
+</body>
+</html>
