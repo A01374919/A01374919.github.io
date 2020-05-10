@@ -1,4 +1,4 @@
-//import productsdb,{ bulkcreate,getData,createEle,Sortobj } from './module.js';
+import productsdb,{ bulkcreate,getData,createEle,Sortobj } from './module.js';
 
 
 const productsdb = (dbname, table) => {
